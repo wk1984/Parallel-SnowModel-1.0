@@ -296,7 +296,7 @@
       run_micromet = 1.0
       run_enbal = 1.0
       run_snowpack = 1.0
-      run_snowtran = 1.0
+      run_snowtran = 0.0
 
 ! Define whether you are doing a standard model simulation, or a
 !   DATA ASSIMILATION RUN where you are going to assimilate
