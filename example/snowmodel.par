@@ -36,8 +36,8 @@
 ! deltay = grid increment in y direction.  Meters.
 !!! (recommended default value: deltax = user input required)
 !!! (recommended default value: deltay = user input required)
-      deltax = 100.0
-      deltay = 100.0
+      deltax = 10000.0
+      deltay = 10000.0
 
 ! Location (like UTM, in meters) value of lower-left grid point.
 !   xmn = value of x coordinate in center of lower left grid cell.
@@ -88,7 +88,7 @@
 !!! (recommended default value: max_iter = user input required)
 !     max_iter = 1
 !     max_iter = 365
-      max_iter = 2920
+      max_iter = 30
 
 ! MicroMet requires a met input file that has data in a specific
 !   format (see the MicroMet documentation).  For the case of
@@ -547,7 +547,6 @@
 !   model run using the external program called make_lg_curve_wt.f
 !   located in /sm/misc_programs/make_lg_curve_wt/).  Turning this
 !   flag off (= 0.0) produces the default model and snow resistance
-!   to wind shear.
 !!! (recommended default value: curve_lg_scale_flag = 0.0)
       curve_lg_scale_flag = 0.0
 
@@ -738,7 +737,7 @@
 !   constant over the entire simulation domain; another code
 !   change will be required to relax this assumption.
 !!! (recommended default value: user input required, or -270.0)
-      tabler_dir = -270.0
+!      tabler_dir = -270.0
 !     tabler_dir = 0.0
 !     tabler_dir = 45.0
 !     tabler_dir = 90.0
@@ -849,6 +848,7 @@
 ! Define whether this is going to be a multi-layer snowpack run
 !   (multilayer_snowpack = 1, else 0).
 !!! (recommended default value: multilayer_snowpack = 0)
+
 !     multilayer_snowpack = 1
       multilayer_snowpack = 0
 
@@ -877,8 +877,8 @@
 !   snowmodel.inc.
 !!! (recommended default value: max_layers = 6)
 !     max_layers = 12
-!     max_layers = 6
-      max_layers = 1
+     max_layers = 6
+!      max_layers = 1
 
 ! Define the minimum snow layer thickness (m) for the multi-layer
 !   snowpack model.  0.001 is an appropriate number.  It is also
@@ -1076,6 +1076,9 @@
 !!! (recommended default value: print_parallel = 0.0)
 !       print_parallel = 0.0
       print_parallel = 1.0
+
+! NETCDF file path: NOT USED IF running without netcdf, but still needs to be set.
+      netcdf_fpath = outputs/
 
 ! Define the directory (the path) where the data will be stored.
 !   This requires a path for "without" assimilation, and a path
