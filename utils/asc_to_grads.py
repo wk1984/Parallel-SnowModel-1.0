@@ -16,8 +16,8 @@ else:
 
 topo_values = np.loadtxt(input_file, skiprows=6)
 
-n_x = topo_values.shape[0]
-n_y = topo_values.shape[1]
+n_y = topo_values.shape[0]
+n_x = topo_values.shape[1]
 
 if len(sys.argv)>2:
     gdat_file = sys.argv[2]
@@ -28,7 +28,7 @@ ctrl_file = os.path.basename(gdat_file).split('.')[0]+'.ctl'
 
 with open(gdat_file, 'wb') as file:
     
-    for ix in np.fliplr(topo_values.transpose()).flatten():
+    for ix in np.flipud(topo_values).flatten():
     
         binary_data = struct.pack("f", ix)
     
@@ -42,7 +42,7 @@ fid.write('XDEF '+str(int(n_x))+' LINEAR 1.0 1.0\n')
 fid.write('YDEF '+str(int(n_y))+' LINEAR 1.0 1.0\n')
 fid.write('ZDEF 1 LINEAR 1 1' + '\n')
 fid.write('TDEF 1 LINEAR 1jan1999 1yr'+'\n')
-fid.write('VARS 2' + '\n')
+fid.write('VARS 1' + '\n')
 fid.write('data 0 0 topography (m)' + '\n')
 fid.write('ENDVARS' + '\n')
 fid.close()
