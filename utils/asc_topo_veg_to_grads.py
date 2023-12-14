@@ -26,7 +26,7 @@ n_x = topo_values.shape[1]
 ctrl_file = os.path.basename(gdat_file).split('.')[0]+'.ctl'
 
 d0 = np.flipud(topo_values)
-
+d1 = np.flipud(veg_values)
 # print(d0.shape, n_x, n_y)
 
 with open(gdat_file, 'wb') as file:
@@ -37,7 +37,7 @@ with open(gdat_file, 'wb') as file:
     
         file.write(binary_data)
         
-    for iy in np.fliplr(veg_values.transpose()).flatten():
+    for iy in d1.flatten():
         
         binary_data = struct.pack("f", iy)
         
