@@ -36,8 +36,8 @@
 ! deltay = grid increment in y direction.  Meters.
 !!! (recommended default value: deltax = user input required)
 !!! (recommended default value: deltay = user input required)
-      deltax = 10000.0
-      deltay = 10000.0
+      deltax = 100.0
+      deltay = 100.0
 
 ! Location (like UTM, in meters) value of lower-left grid point.
 !   xmn = value of x coordinate in center of lower left grid cell.
@@ -1078,7 +1078,7 @@
       print_parallel = 1.0
 
 ! NETCDF file path: NOT USED IF running without netcdf, but still needs to be set.
-      netcdf_fpath = outputs/
+      netcdf_fpath = outputs/wo_assim/
 
 ! Define the directory (the path) where the data will be stored.
 !   This requires a path for "without" assimilation, and a path
