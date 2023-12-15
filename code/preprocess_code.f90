@@ -780,7 +780,7 @@
       else
 ! Otherwise, assume that the number of stations will never be greater
 !   the number of snowmodel grid cells.
-        nstns_max = nx * ny
+        nstns_max = nx * ny * np
       endif
 
 ! Run a check to see whether there are any time slices with no
