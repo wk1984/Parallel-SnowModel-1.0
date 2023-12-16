@@ -29,8 +29,8 @@
 ! Number of x and y cells in the computational grid.
 !!! (recommended default value: nx = user input required)
 !!! (recommended default value: ny = user input required)
-      nx = 399
-      ny = 301
+      nx = 101
+      ny = 89
 
 ! deltax = grid increment in x direction.  Meters.
 ! deltay = grid increment in y direction.  Meters.
@@ -46,8 +46,8 @@
 !     Meters.
 !!! (recommended default value: xmn = user input required)
 !!! (recommended default value: ymn = user input required)
-      xmn = -5000971.2375
-      ymn = -3772662.5125
+      xmn = 1391247.6375
+      ymn = 488816.7375
 
 ! Model time step, dt.  Should be the same increment as in the input
 !   data file.  In seconds.  For what it is worth, I almost always
@@ -71,7 +71,7 @@
 
 ! Start month of input data file.  One or two digit month.  Integer.
 !!! (recommended default value: imonth_init = user input required)
-      imonth_init = 10
+      imonth_init = 9
 
 ! Start day of input data file.  One or two digit day.  Integer.
 !!! (recommended default value: iday_init = user input required)
@@ -86,7 +86,7 @@
 
 ! Number of model iterations defines how many times to process.
 !!! (recommended default value: max_iter = user input required)
-      max_iter = 3
+      max_iter = 60
 !      max_iter = 5112
 !     max_iter = 365
 !     max_iter = 2920
@@ -117,7 +117,7 @@
 !   Tair (deg C or K), rh (%), wind speed (m/s), wind direction
 !   (0-360 True N), and precipitation (mm/time_step).
 !!! (recommended default value: met_input_fname = user input required)
-      met_input_fname = met/dump_DBS.txt
+      met_input_fname = met/CMIP6_ACCESS-CM2ssp245.txt
 
 ! The number used as an undefined value for both inputs and outputs.
 !!! (recommended default value: undef = -9999.0)
@@ -282,7 +282,7 @@
 !   Note that if UTC_flag is non-zero, lat_solar_flag should
 !   probably also be non-zero.
 !!! (recommended default value: UTC_flag = 0.0)
-      UTC_flag = 0.0
+      UTC_flag = -1
 
 ! Define which models that are going to run.  A value of 1.0 means
 !   that you want to run the model (0.0 means don't run it).
