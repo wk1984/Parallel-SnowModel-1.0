@@ -34,7 +34,7 @@ with open(gdat_file, 'wb') as file:
     
         file.write(binary_data)
         
-fid = open(ctrl_file, 'wt')
+fid = open(os.path.join(os.path.dirname(gdat_file), ctrl_file), 'wt')
 fid.write('DSET ^'+gdat_file+'\n')
 fid.write('TITLE '+'topography and landcover for SnowModel'+'\n')
 fid.write('UNDEF '+str(-9999.0)+'\n')
