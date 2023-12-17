@@ -29,15 +29,15 @@
 ! Number of x and y cells in the computational grid.
 !!! (recommended default value: nx = user input required)
 !!! (recommended default value: ny = user input required)
-      nx = 399
-      ny = 399
+      nx = 74
+      ny = 73
 
 ! deltax = grid increment in x direction.  Meters.
 ! deltay = grid increment in y direction.  Meters.
 !!! (recommended default value: deltax = user input required)
 !!! (recommended default value: deltay = user input required)
-      deltax = 25067.525
-      deltay = 25067.525
+      deltax = 34127.415614221529
+      deltay = 34127.415614221529
 
 ! Location (like UTM, in meters) value of lower-left grid point.
 !   xmn = value of x coordinate in center of lower left grid cell.
@@ -46,8 +46,8 @@
 !     Meters.
 !!! (recommended default value: xmn = user input required)
 !!! (recommended default value: ymn = user input required)
-      xmn = -5000971.2375
-      ymn = -5000971.2375
+      xmn = -1518138.901783319423
+      ymn = -1664269.973784569651
 
 ! Model time step, dt.  Should be the same increment as in the input
 !   data file.  In seconds.  For what it is worth, I almost always
